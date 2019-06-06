@@ -11,7 +11,7 @@ require 'pry'
 def sumTwo(array, sum)
   i = 0
   arr = []
-  while i < array.length - 1 do
+  while i < array.length do
     if array[i] + array[i + 1] == sum
        arr << "#{array[i]} and #{array[i + 1]}"
     end
@@ -22,6 +22,7 @@ def sumTwo(array, sum)
   else
     puts arr[0]
   end
+  binding.pry
 end
 
 
@@ -29,5 +30,5 @@ end
 #output should be 4 and 6
 #sumTwo([8,1,5,2], 75)
 #output should be 'no pairs sum to this input'
-#sumTwo([2,2,3,1], 4)
+sumTwo([2,2,3,1], 4)
 #output 2 and 2
